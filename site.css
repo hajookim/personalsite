@@ -1,0 +1,44 @@
+.jumbotron {
+    background: url('images/bg.jpg');
+    text-align: center;
+    margin-top:50px;
+}
+
+h3 {
+    text-align: left; 
+    color: #0033cc;
+}
+body {
+    position: relative;
+}
+.work-container {
+    margin-top: 20px;
+    width: 980px !important ;
+    float: left; 
+
+}
+.container {
+    
+}
+.logo {
+    width: 150px;
+    height: 150px;
+    float: left; 
+}
+.text-container {
+    float:left; 
+    width: 600px;
+    margin-left: 50px;
+}
+
+#projects {
+    
+}
+#spotify {
+    width: 300px;
+    height: 300px;
+    opacity: 0.8;
+    float:right;
+    position: relative;
+    top: -33px;
+}
