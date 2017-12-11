@@ -11,28 +11,32 @@ h3 {
 body {
     position: relative;
 }
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+    margin-top: 20px;
+}
 .work-container {
     margin-top: 20px;
     width: 980px !important ;
-    float: left; 
 
 }
-.container {
-    
-}
+
 .logo {
     width: 150px;
     height: 150px;
-    float: left; 
+
 }
 .text-container {
-    float:left; 
+
     width: 600px;
     margin-left: 50px;
 }
 
-#projects {
-    
+.social-links {
+    text-align: center !important; 
 }
 #spotify {
     width: 300px;
@@ -42,3 +46,4 @@ body {
     position: relative;
     top: -33px;
 }
+
