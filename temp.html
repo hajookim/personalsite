@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+     <script src="https://use.fontawesome.com/a83b3516ff.js"></script>
 
     <!-- Google Fonts -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300,400" rel="stylesheet"> -->
@@ -28,18 +29,15 @@
   </head>
   <body>
 
-  
 
-    <div class="row text-center row-header">
-      <div class="col-sm-12">
-        <div class="header-col">
-          <img src="img/profile.jpg" alt="profile pic" class="img-fluid profile-pic center-block">
-          <h1>Jade Kim</h1>
-          <h2>Fullstack Web and iOS Developer</h2>
-          <a href="mailto:hajookim@umich.edu" class="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>hajookim@umich.edu</a>
+    <div class="row">
+        <div class="col-sm-8 header-info">
+            <img src="img/banner.png" class="banner">
+        </div>
+        <div class="col-sm-4 header-info">
+            <p id="introduction"></p>
         </div>
         
-      </div>
     </div>
 
 <!-- Work Exp -->
@@ -230,7 +228,7 @@
     <div class="row">
       <div class="col footer-col text-center">
         <h3>I'm available for work</h3>
-        <a href="mailto:hajookim@umich.edu" class="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>hajookim@umich.edu</a>
+        <a href="mailto:hajookim@umich.edu" class="email"><span class="fa fa-envelope" aria-hidden="true"></span>hajookim@umich.edu</a>
       </div>
     </div>
     <footer style="background-color: #252A31; height: 200px; text-align: center" id="contact">
@@ -251,6 +249,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script type="text/javascript">
         $('.carousel').carousel(); 
+
+        var i = 0;
+        var txt = "Hello there, I'm Jade. I specialize in fullstack web development.";
+        var speed = 50; 
+
+        function typeWriter() {
+            if ( i < txt.length()) {
+                document.getElementById("introduction").innerHTML += txt.charAt(i); 
+                i++;
+                setTimeout(typeWriter, speed); 
+            }
+        }
     </script>
   </body>
 </html>
