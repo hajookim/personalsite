@@ -33,7 +33,7 @@ hr {
   background-repeat: no-repeat;
   background-position: middle;
   background-size: cover;
-  margin-bottom:100px;
+
   display: flex;
   align-items: center
 }
@@ -57,7 +57,7 @@ hr {
 
 .header-col h2 {
     font-size: 1.3em;
-  margin-bottom: 20px;
+
   margin-top: 0;
 }
 
@@ -100,20 +100,17 @@ hr {
 
 .tech-item-text {
     margin-top:10px;
+    color: white;
 }
 
 .tech-item i {
     font-size:5em;
 }
 
-.tech-tool-item {
-    margin-left:15px;
-  display: inline-block;;
-}
 
 .row-footer {
     padding: 0vh 10vw 10vw 10vw;
-    margin-top:100px;
+    margin-top:40px;
     background-image: url('../img/bg.jpg');
   background-position: bottom;
   background-repeat: no-repeat;
@@ -130,4 +127,60 @@ hr {
   padding: 50px 0;
   max-width:400px;
   margin:auto;
+}
+
+
+
+
+
+.carousel-container {
+  width: 1000px !important;
+  height: 500px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.carousel-text {
+  text-align: center;
+  width: 500px;
+  float: left;
+}
+#mycarousel {
+  width: 100%;
+  background-color: #555555;
+  margin: 0 auto;
+  padding: 0; 
+}
+.carousel-inner {
+  margin: 0 auto;
+
+}
+.carousel-img-container {
+  width: 500px; 
+}
+.work-container {
+  margin: 0 auto;
+  padding: 5;
+  margin-bottom: 20px; 
+}
+
+.text-container {
+  width: 500px; 
+  margin: 20px 20px 20px 60px;
+  text-align: center; 
+}
+
+#technologies {
+  height: 300px;
+  width: 100%;
+  background-color: #252A30;
+  padding: 20px;
+
+}
+#workexperience {
+  background-color: #FED766;
+  width: 100%;
+  padding: 10px;
+
 }
