@@ -14,7 +14,7 @@
     <!-- Google Fonts -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300,400" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
 
 
@@ -30,12 +30,31 @@
   <body>
 
 
-    <div class="row">
+    <div class="row" id="home">
         <div class="col-sm-8 header-info">
+            <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#workexperience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact </a>
+                        </li> 
+                    </ul>
+                </div>
+            </nav>
             <img src="img/banner.png" class="banner">
         </div>
-        <div class="col-sm-4 header-info">
-            <p id="introduction"></p>
+        <div class="col-sm-4">
+            <p id="caption"> Hello, I'm Jade. I am a web developer. I'm currently a senior at the University of Michigan. </p>
         </div>
         
     </div>
@@ -225,7 +244,7 @@
 
 
     
-    <div class="row">
+    <div class="row" id="contact">
       <div class="col footer-col text-center">
         <h3>I'm available for work</h3>
         <a href="mailto:hajookim@umich.edu" class="email"><span class="fa fa-envelope" aria-hidden="true"></span>hajookim@umich.edu</a>
@@ -249,18 +268,34 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script type="text/javascript">
         $('.carousel').carousel(); 
+        var captionLength = 0;
+        var caption = '';
+        $(document).ready(function() {
+            setInterval ('cursorAnimation()', 600);
+            captionEl = $('#caption');
+            caption = $('#caption').html();
+            type(); 
+        });
+        
+        function type() {
 
-        var i = 0;
-        var txt = "Hello there, I'm Jade. I specialize in fullstack web development.";
-        var speed = 50; 
-
-        function typeWriter() {
-            if ( i < txt.length()) {
-                document.getElementById("introduction").innerHTML += txt.charAt(i); 
-                i++;
-                setTimeout(typeWriter, speed); 
+            captionEl.html(caption.substr(0, captionLength++));
+            if(captionLength < caption.length+1) {
+                setTimeout('type()', 100);
+            } else {
+                captionLength = 0;
+                caption = '';
             }
         }
+        function cursorAnimation() {
+            $('#cursor').animate({
+                opacity: 0
+            }, 'fast', 'swing').animate({
+                opacity: 1
+            }, 'fast', 'swing');
+        }
+
+
     </script>
   </body>
 </html>

@@ -179,3 +179,9 @@ hr {
   padding: 10px;
 
 }
+
+#caption {
+    font-family: 'Arvo', sans-serif;
+    font-size: 380%;
+    margin-top: 40px;
+}
